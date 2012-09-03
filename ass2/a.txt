@@ -1,0 +1,7 @@
+This is my solution for assignment 2.
+there are two files uploaded in the folder.
+a_02_1.sh is for problem 1
+and a_02_2.sh is for problem 2.
+Thanks,
+Gorank Dudeja,
+11283
