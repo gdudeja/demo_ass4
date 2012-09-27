@@ -1,0 +1,9 @@
+CS251 assignment 4 first week
+
+ip address where my server is running is 172.24.33.68.4
+
+The link to my github repository is https://github.com/gdudeja/cs251
+
+Gorank Dudeja
+11283
+G4
