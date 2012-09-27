@@ -1,0 +1,7 @@
+this folder contains all the files used in the website.
+the website link is http://172.24.33.68:3000
+the ip of the machine on which server is running is 172.24.33.68
+
+gorank dudeja
+11283
+G4
