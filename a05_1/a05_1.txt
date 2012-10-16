@@ -1,0 +1,58 @@
+#!/gdudeja/etc/octave3.2.conf -qf
+#please change the above path to the path of the octave binary executable in your system 
+i=imread("input.bmp");
+x1=50;					#x1 is the x-coordinate
+count2=0;
+count3=0;
+count4=0;
+count5=0;
+y2=0;
+x2=0;
+for count1=1:8 && x1<=750
+	while y1<600			#y1 is the y-coordinate
+		if i(x1,y1)=="1"		#1 is the color code for white color and 0 for black
+			y1=y1+20;
+			break;
+		endif
+		y1=y1+1;
+	endwhile
+	if count1==1               
+		for count4=0:x1
+			for count2=y1:y1+10
+				i(count4,count2)="0";
+			endfor
+		endfor
+	endif
+	if count1==8
+		for count4=760:800
+			for count2=y1:y1+10
+				i(count4,count2)="0";
+			endfor
+		endfor
+	endif
+	for count4=x1:x1+60
+		for count2=y1:y1+10
+			i(count4,count2)="0";
+		endfor
+	endfor
+	count5=x1+60;
+	x2=count4;
+	if count1<8 && count1>1
+		while y2<600			#y2 is the y-coordinate of hole in the next wall
+			if i(x1,y2)=="1"
+				y2=y2+20;
+				break;
+			endif
+			y2=y2+1;
+		endwhile
+	endif
+	if y2>y1
+		for count4=x2:x2+10
+			for count2=y1+20:y2+20
+				i(count4,count2)=="0";
+			endfor
+		endfor
+	endif				
+endfor
+imwrite(i,"output.bmp");
+imshow("output.bmp")
